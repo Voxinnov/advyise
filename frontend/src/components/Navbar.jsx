@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,13 +15,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled glass-panel' : ''}`} style={styles.nav}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} style={styles.nav}>
       <div className="container" style={styles.container}>
-        <div className="logo" style={styles.logo}>
-          <span className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: '800' }}>ADVYISE</span>
-        </div>
+        <a href="#hero" className="logo" style={{ ...styles.logo, textDecoration: 'none' }}>
+          <img src={logo} alt="ADVYISE Logo" style={{ height: '40px', objectFit: 'contain' }} />
+        </a>
         
         <div className="desktop-menu" style={styles.desktopMenu}>
+          <a href="#hero" style={styles.link}>Home</a>
           <a href="#services" style={styles.link}>Services</a>
           <a href="#approach" style={styles.link}>Approach</a>
           <a href="#why-us" style={styles.link}>Why Us</a>
@@ -36,6 +38,7 @@ const Navbar = () => {
       
       {isMobileMenuOpen && (
         <div className="mobile-menu glass-panel" style={styles.mobileMenu}>
+          <a href="#hero" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Home</a>
           <a href="#services" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Services</a>
           <a href="#approach" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
           <a href="#why-us" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Why Us</a>

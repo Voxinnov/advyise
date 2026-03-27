@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
     <footer style={styles.footer} className="glass-panel">
       <div className="container" style={styles.container}>
         <div style={styles.brand}>
-          <h2 className="gradient-text" style={{ margin: 0, fontFamily: 'Outfit', fontWeight: 800 }}>ADVYISE</h2>
+          <img src={logo} alt="ADVYISE Logo" style={{ height: '40px', objectFit: 'contain', margin: 0 }} />
           <p style={styles.tagline}>Digital Growth Partner</p>
         </div>
         

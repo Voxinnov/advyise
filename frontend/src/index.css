@@ -138,3 +138,13 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.4);
 }
+
+/* Navbar Scrolled State */
+.navbar.scrolled {
+  background-color: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 0.75rem 0 !important;
+}
