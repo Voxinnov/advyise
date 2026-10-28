@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
 
           <form onSubmit={handleSubmit} style={styles.form}>
-            <div style={styles.row}>
+            <div className="form-row" style={styles.row}>
               <div style={styles.inputGroup}>
                 <label style={styles.label}>Full Name</label>
                 <input type="text" name="name" required value={formData.name} onChange={handleChange} style={styles.input} />
@@ -104,7 +104,6 @@ const styles = {
   row: {
     display: 'flex',
     gap: '1.5rem',
-    className: 'form-row'
   },
   inputGroup: {
     display: 'flex',

@@ -13,7 +13,7 @@ const reasons = [
 const WhyUs = () => {
   return (
     <section id="why-us" className="section-padding">
-      <div className="container" style={styles.container}>
+      <div className="container why-us-container" style={styles.container}>
         <motion.div 
           style={styles.imageCol}
           initial={{ opacity: 0, x: -50 }}
@@ -55,13 +55,7 @@ const WhyUs = () => {
         </motion.div>
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .why-us-container {
-            flex-direction: column !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };
@@ -71,7 +65,6 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4rem',
-    className: 'why-us-container'
   },
   imageCol: {
     flex: 1,

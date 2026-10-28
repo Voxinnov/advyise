@@ -70,6 +70,7 @@ const Services = () => {
         </div>
 
         <motion.div 
+          className="services-grid"
           style={styles.grid}
           variants={containerVariants}
           initial="hidden"

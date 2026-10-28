@@ -20,7 +20,7 @@ const Approach = () => {
           </p>
         </div>
 
-        <div style={styles.timeline}>
+        <div className="timeline-layout" style={styles.timeline}>
           {steps.map((step, idx) => (
             <motion.div 
               key={idx} 
@@ -60,7 +60,6 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     gap: '1.5rem',
-    className: 'timeline-layout', 
   },
   stepContainer: {
     flex: 1,

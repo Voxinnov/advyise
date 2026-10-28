@@ -148,3 +148,110 @@ a {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   padding: 0.75rem 0 !important;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: block !important;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .mobile-menu {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .mobile-menu a {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 1.5rem;
+    border: none !important;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  /* Typography */
+  .section-title {
+    font-size: 1.875rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* Services grid: single column on mobile */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why Us: stack columns vertically */
+  .why-us-container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  /* Why Us: reduce fixed height of stats panel */
+  .why-us-container > div:first-child {
+    height: 280px !important;
+    width: 100%;
+  }
+
+  /* Approach timeline: stack vertically */
+  .timeline-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+
+  .timeline-layout > div {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Form row: stack on mobile */
+  .form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

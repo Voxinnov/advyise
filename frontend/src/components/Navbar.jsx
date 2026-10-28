@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} style={styles.nav}>
       <div className="container" style={styles.container}>
         <a href="#hero" className="logo" style={{ ...styles.logo, textDecoration: 'none' }}>
-          <img src={logo} alt="ADVYISE Logo" style={{ height: '40px', objectFit: 'contain' }} />
+          <img src={logo} alt="ADVYISE Logo" style={{ height: '60px', objectFit: 'contain' }} />
         </a>
         
         <div className="desktop-menu" style={styles.desktopMenu}>
@@ -37,12 +37,12 @@ const Navbar = () => {
       </div>
       
       {isMobileMenuOpen && (
-        <div className="mobile-menu glass-panel" style={styles.mobileMenu}>
-          <a href="#hero" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Home</a>
-          <a href="#services" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-          <a href="#approach" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
-          <a href="#why-us" style={styles.mobileLink} onClick={() => setIsMobileMenuOpen(false)}>Why Us</a>
-          <a href="#contact" className="btn btn-primary" style={{ marginTop: '1rem', width: '100%' }} onClick={() => setIsMobileMenuOpen(false)}>
+        <div className="mobile-menu">
+          <a href="#hero" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
+          <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+          <a href="#approach" onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
+          <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)}>Why Us</a>
+          <a href="#contact" className="btn btn-primary" style={{ marginTop: '1rem' }} onClick={() => setIsMobileMenuOpen(false)}>
             Let's Talk
           </a>
         </div>
@@ -82,11 +82,11 @@ const styles = {
     transition: 'var(--transition)',
   },
   mobileToggle: {
-    display: 'none',
     background: 'none',
     border: 'none',
     color: 'var(--text-primary)',
     cursor: 'pointer',
+    display: 'none',
   },
   mobileMenu: {
     position: 'absolute',
